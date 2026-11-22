@@ -283,8 +283,43 @@ footer p { color: #c2d7dd; font-size: 13px; margin-top: 8px; }
 .date-picker-manual input{width:100%;box-sizing:border-box;padding:13px;border:1px solid #cbdadd;border-radius:10px;margin:8px 0;font-size:18px}
 .date-picker-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:14px}
 .date-picker-actions .primary{background:#087e8b;color:#fff}
+/* Mobile Header Button Position */
+@media screen and (max-width: 768px) {
 
-</style>
+  header .nav {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 10px;
+  }
+
+  header .brand {
+    grid-column: 1;
+    grid-row: 1;
+    min-width: 0;
+    gap: 8px;
+  }
+
+  header .nav > .btn {
+    grid-column: 2;
+    grid-row: 1;
+    white-space: nowrap;
+    margin: 0;
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+
+  header .navlinks {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+
+}
+</style
 </head>
 <body>
 
